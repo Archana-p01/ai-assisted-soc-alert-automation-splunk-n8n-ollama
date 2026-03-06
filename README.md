@@ -22,14 +22,14 @@ Attack Flow:
 Kali Attacker → Windows Target → Splunk SIEM → Webhook → n8n Automation → Ollama AI → Slack Alert
 
 ## Implementation Steps
-1. Attack Simulation
+## 1. Attack Simulation
 
 A brute-force attack was launched from the attacker machine running Kali Linux against the Windows 10 target system to generate multiple authentication failures.
 These failed login attempts created security events in the Windows Event Logs, simulating a real-world brute-force attack scenario.
 ```
 hydra -l testuser -P password.txt rdp://192.168.1.10 
 ```
-2. Log Collection
+## 2. Log Collection
 Windows security logs were forwarded to Splunk using Splunk Universal Forwarder.
 Windows Event ID 4625 (failed login attempts) was used to detect suspicious authentication activity.
 ```
@@ -38,4 +38,5 @@ index=soc_project EventCode=4625 src_ip!=127.0.0.1
 ```
 This query filters failed authentication events and aggregates them by time, host, username, and source IP address to identify repeated login failures.
 If multiple failed attempts occur within a short period, it indicates a possible brute-force attack.
+
 ![SOC Lab Architecture](./Screenshots/log-collection.png)
