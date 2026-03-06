@@ -29,3 +29,13 @@ These failed login attempts created security events in the Windows Event Logs, s
 ```
 hydra -l testuser -P password.txt rdp://192.168.1.10 
 ```
+2. Log Collection
+Windows security logs were forwarded to Splunk using Splunk Universal Forwarder.
+Windows Event ID 4625 (failed login attempts) was used to detect suspicious authentication activity.
+```
+index=soc_project EventCode=4625 src_ip!=127.0.0.1
+| stats count by _time, ComputerName, user, src_ip
+```
+This query filters failed authentication events and aggregates them by time, host, username, and source IP address to identify repeated login failures.
+If multiple failed attempts occur within a short period, it indicates a possible brute-force attack.
+![SOC Lab Architecture](./Screenshots/log-collection.png)
