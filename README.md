@@ -45,7 +45,7 @@ If multiple failed attempts occur within a short period, it indicates a possible
 
 A Splunk search query was created to detect brute-force activity by identifying multiple failed login attempts within a short time window.
 
-## 4️. Webhook Integration
+## 4. Webhook Integration
 
 The Splunk alert action was configured to send alert data to an n8n Webhook URL.
 This allows the SIEM alert to be automatically forwarded into the automation pipeline.
