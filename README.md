@@ -94,32 +94,51 @@ After AI analysis, the final alert information is automatically sent to a SOC no
 ## Tools & Technologies
 
 Splunk Enterprise
+
 Splunk Universal Forwarder
+
 n8n
+
 Ollama
+
 Phi-3 Mini LLM
+
 Slack
+
 Docker
+
 Kali Linux
+
 Windows 10
 
 ## Key Features
 
 ✔ Simulated real SOC attack scenario
+
 ✔ SIEM detection using Splunk
+
 ✔ Automated alert forwarding via webhook
+
 ✔ AI-assisted security analysis
+
 ✔ Real-time Slack alerting
+
 ✔ Fully automated SOC workflow
 
 ## 📊 Skills Demonstrated
 
 SIEM log analysis
+
 Splunk alert engineering
+
 Security automation
+
 SOC workflow development
+
 AI integration in cybersecurity
+
 Incident detection & alerting
+
 Threat monitoring
 
 ## Learning Outcome
