@@ -11,7 +11,7 @@ The system integrates Splunk SIEM, n8n workflow automation, and Ollama LLM to si
 
 The project environment consists of four virtual machines deployed in a controlled SOC lab environment to simulate real-world security monitoring, attack detection, and automated alert response.
 
-![SOC Lab Architecture](./Screenshots/architecture.png)
+![SOC Lab Architecture](./Screenshots/architecture.PNG)
 
 1. Kali Linux – Attacker machine used to simulate brute-force attacks
 2. Ubuntu Desktop – Splunk SIEM server for log analysis and alert generation
