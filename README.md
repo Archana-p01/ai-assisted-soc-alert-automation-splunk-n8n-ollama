@@ -40,3 +40,17 @@ This query filters failed authentication events and aggregates them by time, hos
 If multiple failed attempts occur within a short period, it indicates a possible brute-force attack.
 
 ![SOC Lab Architecture](./Screenshots/log-collection.png)
+
+## 3. Detection Rule
+
+A Splunk search query was created to detect brute-force activity by identifying multiple failed login attempts within a short time window.
+
+## 4️. Webhook Integration
+
+The Splunk alert action was configured to send alert data to an n8n Webhook URL.
+This allows the SIEM alert to be automatically forwarded into the automation pipeline.
+
+![SOC Lab Architecture](./Screenshots/detection-rule.png)
+
+
+
