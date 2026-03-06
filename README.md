@@ -1,5 +1,4 @@
-# ai-assisted-soc-alert-automation-splunk-n8n-ollama
-
+# AI-Assisted SOC Alert Automation using Splunk, n8n and Ollama
 AI-assisted SOC alert automation lab using Splunk SIEM, n8n workflow automation, Ollama LLM, and Slack integration to detect and analyze brute-force attacks.
 
 ## Project Overview
@@ -21,3 +20,12 @@ The project environment consists of four virtual machines deployed in a controll
 Attack Flow:
 
 Kali Attacker → Windows Target → Splunk SIEM → Webhook → n8n Automation → Ollama AI → Slack Alert
+
+## Implementation Steps
+1. Attack Simulation
+
+A brute-force attack was launched from the attacker machine running Kali Linux against the Windows 10 target system to generate multiple authentication failures.
+These failed login attempts created security events in the Windows Event Logs, simulating a real-world brute-force attack scenario.
+```
+hydra -l testuser -P password.txt rdp://192.168.1.10 
+```
