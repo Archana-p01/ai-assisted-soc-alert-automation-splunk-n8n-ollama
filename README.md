@@ -43,7 +43,7 @@ If multiple failed attempts occur within a short period, it indicates a possible
 
 ## 3. Detection Rule
 
-A Splunk search query was created to detect brute-force activity by identifying multiple failed login attempts within a short time window.
+A Splunk search query was created to detect brute-force activity by identifying multiple failed login attempts within a short time window
 
 ## 4. Webhook Integration
 
